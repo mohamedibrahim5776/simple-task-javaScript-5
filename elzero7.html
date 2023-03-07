@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: grid;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #btn {
+        margin: 20px auto;
+        padding: 10px 15px;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <button id="btn" >Refresh</button>
+    <script>
+        hex = [1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'] 
+        
+        newHex = []
+        for(let i= 0; i<6; i++) {
+            newHex.push(hex[Math.floor(Math.random() * hex.length)])
+        }
+        final = `#${newHex.join('')}`
+        btn.onclick = function () {
+            window.location.reload()
+        } 
+        document.body.append(final)
+        document.body.style.backgroundColor = final
+    </script>
+</body>
+</html>
